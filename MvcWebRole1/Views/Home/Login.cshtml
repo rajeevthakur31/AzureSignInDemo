@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{ 
+<div>
+    <span style="color:red;font:bolder">@ViewBag.msg</span><br />
+    UserName :<input type="text" id="txtuserName"name="txtuserName" style="border-radius:5px;border-color:black;margin-left:10px" /><br />
+
+    Password :<input type="password" id="txtpassword" name="txtpassword"  style="border-radius:5px;border-color:black;margin-left:10px" /><br />
+
+    <input type="submit" value="Login"style="border-radius: 5px; border-color: black; margin-left: 10px" />
+    @Html.ActionLink("Register","Register","Home")
+</div>
+
+
+}
+    
+
+

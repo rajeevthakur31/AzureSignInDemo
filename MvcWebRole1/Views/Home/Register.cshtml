@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <div>
+       <span style="color:red;font:bold">@ViewBag.msg</span><br /> 
+        UserName :<input type="text" id="txtuserName" name="txtuserName" style="border-radius: 5px; border-color: black; margin-left: 10px" /><br />
+
+        Password :<input type="password" id="txtpassword" name="txtpassword" style="border-radius: 5px; border-color: black; margin-left: 10px" /><br />
+
+        PhoneNo :<input type="text" id="txtphone" name="txtphone" style="border-radius: 5px; border-color: black; margin-left: 10px" /><br />
+
+        Emailid :<input type="text" id="txtemail" name="txtemail" style="border-radius: 5px; border-color: black; margin-left: 10px" /><br />
+
+        Image Upload :<input type="file" id="uploadfile" name="uploadfile" accept="image/*" style="border-radius: 5px; border-color: black; margin-left: 10px" />
+
+        <input type="submit" value="Register" style="border-radius: 5px; border-color: black; margin-left: 10px" />
+        @Html.ActionLink("Login", "Login", "Home")
+    </div>
+
+
+}
